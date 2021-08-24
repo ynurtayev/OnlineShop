@@ -1,0 +1,21 @@
+<div *ngIf="!logged">
+  <h1>Login</h1>
+  <p>Username: <input type="text" [(ngModel)]="username"></p>
+  <p>Password: <input type="text" [(ngModel)]="password"></p>
+
+  <button (click)="login()">Login</button>
+</div>
+
+<div class="wrapper" *ngIf="logged">
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+  <button (click)="logout()">Logout</button>
+
+</div>
+
+<!--
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
